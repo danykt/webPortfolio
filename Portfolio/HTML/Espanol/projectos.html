@@ -1,0 +1,116 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cesar's Resume</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../CSS/resume.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+	<script src="../../JavaScript/handlebars.min.js">
+     </script>
+
+     <script id="templateHB" type="text/x-handlebars-template">
+      {{#each languages}}
+		<a class="language"  href="#{{ref}}"> {{name}}
+		<div class ="language-icon">
+			<i class="{{iconClass}}"></i>
+	    </div>
+		 </a>
+
+	 {{/each}}
+     </script>
+     <script id="template2HB" type="text/x-handlebars-template">
+      {{#each projects}}
+			<div class="project" id={{id}}>
+		   			<div class="project-heading">
+			   			 <div class="project-title">
+			   			  <h3> {{heading}} </h3>
+			   			</div>
+			   			<div class="project-date">
+			   			  <h3> {{date}} </h3>
+			   			</div>
+		   			</div>
+		   			<div class="project-description">
+		   				<p> {{description}}</p>
+		   			</div>
+		   			
+		   			<a href="{{link}}" target="_blank">
+		   			<div class="project-link">
+		   				<h3> Learn more </h3>
+		   			</div>
+		   			</a>
+		   			<div class="technologies-used">
+		   				<div class="big-icons">
+			   				{{#each this.technologyIcons}}
+			   					<i class="circular inverted {{iconName}} {{iconColor}} icon"></i>
+			   				{{/each}}
+		   				</div>
+		   				<div class="small-icons">
+		   					{{#each this.technologyIcons}}
+			   					<i class="circular inverted {{iconName}} {{iconColor}} icon"></i>
+			   				{{/each}}
+		   				</div>
+		   			</div>
+		   		</div>
+
+	 {{/each}}
+     </script>
+</head>
+<body>
+	<div id="content">
+	<nav>
+		<ul>
+		 <a href="./indice.html" class="navigation-link"><li class="link"> <i class="user  icon"></i> <div class="link-info">Acerca</div></li></a>
+		 <a href="#" class="navigation-link"><li class="link" id="active"><i class="folder   icon"></i><div class="link-info"> Projectos </div> </li></a>
+		 <a href="./contactar.html" class="navigation-link"><li class="link"><i class="mail  icon"></i><div class="link-info">Contactar</div></li></a>
+		 <a href="../English/resume.html" class="navigation-link"><li id="language" class="link">
+			<i class="world   icon"></i>
+			<div class="link-info">English</div>
+		</li></a>
+		</ul>
+
+
+	</nav>
+	<div id="projects-bar">
+		<div id="projects-heading" class="bar-item">
+	       	<h2> Mis Projectos </h2>
+	     </div>
+		
+		<div id="technologies" class="bar-item">
+	       <div class="dropdown-languages">
+	       	 <input type="text" placeholder="Busqueda..." id="language-input" onclick="toggleVisibility()" onkeyup="filterResults()">
+	      <!-- 	 <button onclick="renderLanguages()" class="dropdown-button">
+	           <i class="caret squre down icon"></i>
+	       	 </button>-->
+	       	 	<div id="dropdownIn" class="dropdown-list">
+	       	 		<!-- render languages options through handlebars -->
+			    </div>
+	       </div>
+   		</div>
+   	</div>
+
+   	<div id="projects-board" class="board">
+
+   	</div>
+     
+
+
+
+	<div id="projects">
+		
+	</div>
+
+	<div id="footer">
+		<div class="footer-section" id="copyright">
+			@2020 Cesar Labastida
+		</div>
+	</div>
+	<script src="../../Javascript/Espanol/projectos.js"></script>
+</div>
+</body>
+</html>

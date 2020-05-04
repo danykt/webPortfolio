@@ -1,0 +1,81 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portafolio de Cesar</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="../../CSS/style.css" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+	 <script src="../../JavaScript/handlebars.min.js">
+     </script>
+     <script id="templateHB" type="text/x-handlebars-template">
+       <h1 id="fun-facts-title">Un poco sobre mi...</h1>
+      {{#each items}}
+ 	  <div class="section">
+			
+
+			<div class="section-image" id="{{imgId}}">
+				<div id="{{id}}" class="section-description">
+				<h3 id="{{id}}-title">{{title}}</h3>
+				<p id="{{id}}-description">{{description}}</p>
+			    </div> 
+			</div>
+			
+			<div class="section-description-side">
+				<h3>{{title}}</h3>
+				<p>{{description}}</p>
+			</div>
+
+
+
+		</div>
+	 {{/each}}
+     </script>
+</head>
+<body id="body">
+	<div id="content">
+	<nav>
+		<ul>
+		 <a href="#" class="navigation-link"><li class="link" id="active"> <i class="user  icon"></i> <div class="link-info">Acerca</div></li></a>
+		 <a href="./projectos.html" class="navigation-link"><li class="link"><i class="folder   icon"></i><div class="link-info"> Projectos </div> </li></a>
+		 <a href="./contact.html" class="navigation-link"><li class="link"><i class="mail  icon"></i><div class="link-info">Contactar</div></li></a>
+		 <a href="../Espanol/indice.html" class="navigation-link"><li id="language" class="link">
+			<i class="world   icon"></i>
+			<div class="link-info">English</div>
+		</li></a>
+		</ul>
+
+
+	</nav>
+
+	<div id="background-photo">
+		<h1 id="welcome"> Bienvenido a mi sitio web </h1>
+
+    <!--
+	<div id="about-me">
+	  <h1> Welcome to my website </h1>
+	</div>-->
+	</div> 
+
+	<div id="about-me-section">
+		
+
+
+	</div>
+
+	<div id="footer">
+		<div class="footer-section" id="copyright">
+			@2020 Cesar Labastida
+		</div>
+	</div>
+
+
+    <script src="../../JavaScript/Espanol/indice.js"></script>
+</div>
+</body>
+</html>
+
+
